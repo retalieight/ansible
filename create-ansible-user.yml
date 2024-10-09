@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Create ansible user
+      ansible.builtin.user:
+        name: ansible
+        state: present
